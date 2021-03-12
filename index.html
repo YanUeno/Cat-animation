@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<title>Trust-Me</title>
+<style>
+body {
+font-family: verdana, arial, helvetica, sans-serif;
+font-size: 9px;
+background-color: black;
+text-align: center;
+}
+.imagem{
+    width: 50%;
+    height: 50%;
+
+}
+.dvimg{
+    padding-top: 20px;
+}
+body a{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 20px;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    margin-top: 200px;
+}
+.escondersimp{
+    display: none;
+}
+
+@media (max-width: 600px)
+{
+    .imagem {
+    width: 51em;
+    height: 51em;
+    }
+}
+
+@media (max-width: 470px)
+{
+   
+}
+
+</style>
+
+</head>
+    <body>
+        <div id="esconder" style="display: none;">
+            <a>"The road so faar"</a>
+            <div class="dvimg">
+                <img class="imagem" src="cat.gif">
+            </div>
+        </div>
+        <div id="esconder2"class="escondersimp">
+            <div class="dvimg">
+                <img class="imagem" src="simpson.gif">
+            </div>
+        </div >
+
+        
+        
+       <audio>
+            <source src="The-House-of-the-Rising-Sun.mp3" type="audio/mpeg">
+            <source src="The-House-of-the-Rising-Sun.ogg" type="audio/ogg">
+        </audio> 
+        
+        <button type="button" id="botaoesconder" class="btn btn-default">Trust me</botton>
+    </body>
+</html>
+
+<script>
+      const button = document.getElementById('botaoesconder')
+      button.addEventListener('click', function(){
+      const audio = document.querySelector('audio')
+      audio.play();
+      document.getElementById('esconder').style.display = 'block';
+      document.getElementById('esconder2').style.display = 'block';
+      document.getElementById('botaoesconder').style.display = 'none';
+    })
+    
+
+</script>
